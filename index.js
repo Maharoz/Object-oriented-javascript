@@ -1,13 +1,13 @@
-const circle = { 
-    radius :1 ,
-    location:{
-        x:1,
-        y:1
-    },
-    draw: function(){
-        console.log('draw');
-    }
-};
+//factory function
 
-//object literal syntax demo
-circle.draw(); //calling the draw method
+function createCircle(raduis){
+     return { 
+        radius,
+        draw: function(){
+            console.log('draw');
+        }
+    };    
+}
+
+const circle = createCircle(1);
+circle.draw(); 
