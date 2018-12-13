@@ -1,34 +1,41 @@
-function Circle(radius){ 
-    this.radius = radius;
+//stop watch solution
+function StopWatch(){
+    let startTime,endTime,running,duration = 0;
 
-    let defaultLocation ={ x:5 ,y:6};
+    this.start = function(){
+        if(running)
+        throw new Error('Stopwatch has already started');
 
-   let computeOptimumLocation= function(factor){
-        //...
-    }
-    this.getDefaultLocation = function(){
-        return defaultLocation;
-    }
-    this.draw = function(){
-        console.log('draw');
-    }
+        running = true;
 
-    Object.defineProperty(this, 'defaultLocation',{
-        get: function(){
-            return defaultLocation;
-        },
-        set: function(value){
-            if(!value.x || !value.y){
-                throw new Error('Invalid location.')
+        startTime = new Date();
+    };
 
-                defaultLocation = value;
-            }
+    this.stop = function(){
+        if(!running)
+        throw new Error('Stopwatch is not started');
+
+        running = false;
+
+        endTime = new Date();
+
+        const seconds = (endTime.getTime()-startTime.getTime())/1000;
+
+        duration += seconds;
+
+    };
+
+
+    this.reset = function(){
+        startTime = null;
+        endTime = null;
+        running = false;
+        endTime = 0;
+    };
+
+    Object.defineProperty(this,'duration',{
+        get : function(){
+            return duration;
         }
-    })
+    });
 }
-
-const circle = new Circle(10);
-circle.defaultLocation =1;
-circle.getDefaultLocation();
-circle.draw();
-
