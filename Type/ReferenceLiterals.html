@@ -9,7 +9,10 @@
         }
         document.write(student.name);
 
+        //literal syntax
         var studentNames = ["John", " Bobs ", "Harry"];
+        
+        //constructor syntax
         var sn = new Array("Johnathon","Bob","Harry");
 
         document.write(studentNames[0]);
@@ -19,7 +22,9 @@
             return "hello" + name;
         }
 
-        var myFunc = new Function("name","return 'hello'+name")
+        var myFunc = new Function("name","return 'hello'+name");
+
+        var regEx = /\d+/;
     </script>
 </head>
 <body>
