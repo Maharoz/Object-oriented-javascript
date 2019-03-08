@@ -18,13 +18,23 @@
         document.write(studentNames[0]);
         document.write(sn[0]);
 
+        //function literals
         function hello(name){
             return "hello" + name;
         }
 
         var myFunc = new Function("name","return 'hello'+name");
 
+        //regex literals
         var regEx = /\d+/;
+
+        document.write((student instanceof Object) + "<br/>");
+        document.write((studentNames instanceof Array)  + "<br/>");
+        document.write((hello instanceof Function)  + "<br/>");
+       
+        
+
+
     </script>
 </head>
 <body>
