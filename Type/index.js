@@ -6,10 +6,13 @@ var object = null;
 var x = 123;
 var y=x;
 y=465;
+var s = "123";
 
 document.write(typeof customerName + "<br/>")
 document.write(typeof accountBalance + "<br/>")
 document.write(typeof isValid + "<br/>")
-document.write(typeof object + "<br/>")
+document.write((object === null) + "<br/>")
 document.write(typeof x + "<br/>")
 document.write(y + "<br/>")
+document.write(x==s);//true
+document.write(x===s);//false
