@@ -3,6 +3,8 @@
 <head>
 
     <script>
+
+        document.write(evenOrOdd(10)); //Output will be even
        function evenOrOdd(num){
            if(num%2==0){
                return "even";
@@ -12,13 +14,10 @@
            }
        }
 
-   //assigning function to a variable
-       evenOrOdd = new Function()
 
-        var e = evenOrOdd;
-
-       document.write(evenOrOdd(10));
-
+        
+       
+       document.write(evenOrOdd2(5));//will give error becase function hoisting is not happening
        var evenOrOdd2 = function(num){
            if(num%2==0){
                return "even";
@@ -27,7 +26,7 @@
                return "odd";
            }
        };
-       document.write(evenOrOdd2(5));
+       
 
      
     </script>
