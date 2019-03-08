@@ -12,8 +12,12 @@
            }
        }
 
-       document.write(evenOrOdd(10));
+   //assigning function to a variable
+       evenOrOdd = new Function()
 
+        var e = evenOrOdd;
+
+       document.write(evenOrOdd(10));
 
        var evenOrOdd2 = function(num){
            if(num%2==0){
