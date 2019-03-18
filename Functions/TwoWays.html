@@ -4,7 +4,8 @@
 
     <script>
 
-        document.write(evenOrOdd(10)); //Output will be even
+        document.write(argument[1]); //Output will be even
+
        function evenOrOdd(num){
            if(num%2==0){
                return "even";
@@ -15,9 +16,11 @@
        }
 
 
-        
+        var e = evenOrOdd;
+
+        document.write(e(10,20,30,40));
        
-       document.write(evenOrOdd2(5));//will give error becase function hoisting is not happening
+      // document.write(evenOrOdd2(5));//will give error becase function hoisting is not happening
        var evenOrOdd2 = function(num){
            if(num%2==0){
                return "even";
