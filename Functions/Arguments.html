@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script>
+
+    function product(){
+        var result = 1;
+       
+        for(var i = 0 ; i< arguments.length ; i++){
+            result *= arguments[i];
+        }
+        
+        return result;
+    }
+
+document.write(product(3,4,5));
+document.write(product(10,4,5));
+document.write(product(3,12,5));
+document.write(product(3,4,15));
+document.write(product());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
