@@ -4,9 +4,10 @@
 
     <script>
 
-function DisplayDetails(){
+function DisplayDetails(testscore){
           document.write(this.id+"<br/>");
-          document.write(this.name);
+          document.write(this.name+"<br/>");
+          document.write(testscore+"<br/>");
       }
 
   var student1={
@@ -23,9 +24,9 @@ function DisplayDetails(){
 
   this.id = 3;
   this.name="Marry";
-  DisplayDetails.call(student1);
-  DisplayDetails.call(student2);
-  DisplayDetails.call();
+  DisplayDetails.apply(student1,[10]);
+  DisplayDetails.apply(student2,[20]);
+  DisplayDetails.apply(this,[30]);
 
     </script>
 </head>
