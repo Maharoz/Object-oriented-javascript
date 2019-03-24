@@ -4,15 +4,28 @@
 
     <script>
 
-  var student={
-      id:1,
-      name:"Bob",
-      display:function(){
+function DisplayDetails(){
           document.write(this.id+"<br/>");
           document.write(this.name);
       }
+
+  var student1={
+      id:1,
+      name:"Bob",
+      display:DisplayDetails
   };
-student.display();
+
+  var student2={
+      id:2,
+      name:"John",
+      display:DisplayDetails
+  };
+
+  this.id = 3;
+  this.name="Marry";
+student1.display();
+student2.display();
+DisplayDetails();
     </script>
 </head>
 <body>
