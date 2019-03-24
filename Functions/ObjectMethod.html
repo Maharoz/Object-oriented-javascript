@@ -12,20 +12,21 @@ function DisplayDetails(){
   var student1={
       id:1,
       name:"Bob",
-      display:DisplayDetails
+     
   };
 
   var student2={
       id:2,
       name:"John",
-      display:DisplayDetails
+     
   };
 
   this.id = 3;
   this.name="Marry";
-student1.display();
-student2.display();
-DisplayDetails();
+  DisplayDetails.call(student1);
+  DisplayDetails.call(student2);
+  DisplayDetails.call();
+
     </script>
 </head>
 <body>
