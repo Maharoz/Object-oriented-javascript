@@ -9,9 +9,13 @@
   var course2 =  new Object();
   course2.name = "React js";
   course1.name = "End to end java project";
+  
   course1.description = "Master java project development";
 
-console.log("name" in course1);
+  delete course1.description;
+
+console.log("description" in course1);
+
 console.log("toString" in course1);
 console.log(course1.hasOwnProperty("toString"));
 
