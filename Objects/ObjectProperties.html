@@ -12,12 +12,17 @@
   
   course1.description = "Master java project development";
 
-  delete course1.description;
+  //delete course1.description;
 
 console.log("description" in course1);
 
 console.log("toString" in course1);
 console.log(course1.hasOwnProperty("toString"));
+
+for(var eachProp in course1){
+    console.log(eachProp);
+    console.log(course1[eachProp]);
+}
 
     </script>
 </head>
