@@ -24,6 +24,13 @@ for(var eachProp in course1){
     console.log(course1[eachProp]);
 }
 
+var allProperties=Object.keys(course1);
+for(var i=0;i<allProperties.length;i++){
+console.log(allProperties[i]);
+console.log(course1[allProperties[i]]);
+}
+
+console.log(course1.propertyIsEnumerable("name"));
     </script>
 </head>
 <body>
